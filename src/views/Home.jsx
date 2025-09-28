@@ -4,7 +4,7 @@ import AtmoGraf from '../assets/img/AtmoGraf.png'
 export function Home() {
     return (
         <section className='home flex column justify-center align-center'>
-            <article className='main-logo flex align-center' gap-5>
+            <article className='main-logo flex align-center justify-center gap-5' >
                 <img src={iconImg} alt="" />
                 <h1>Atmo</h1>
             </article>
