@@ -23,6 +23,3 @@ export function App() {
 
 export default App
 
-
- git config --global user.email "carmel.amarilio@tufin.com"
-  git config --global user.name "Carmel-Amarilio"
