@@ -5,6 +5,7 @@ import './assets/styles/main.scss'
 
 import { Home } from './views/Home'
 import { store } from './store/store'
+import { AtmoAction } from './views/AtmoAction'
 
 export function App() {
   return (
