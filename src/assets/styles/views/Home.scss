@@ -4,10 +4,11 @@
             rgba($prime-clr, 0) 80%,
             #ffffff 100%);
     height: 100vh;
+    gap: 100px;
 
     .main-logo {
         img {
-            width: 200px;
+            width: 150px;
         }
 
         h1 {
@@ -17,11 +18,16 @@
 
     .scend-logo {
         display: grid;
-        grid-template-columns: 1fr 400px;
+        grid-template-columns: 350px 400px;
         gap: 30px;
+
+        h2{
+            font-size: 2.4em;
+        }
 
         button {
             border-radius: 2em;
+            align-self: start;
         }
 
     }

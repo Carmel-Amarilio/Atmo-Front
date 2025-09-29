@@ -13,6 +13,7 @@ export function App() {
         <main >
           <Routes>
             <Route element={<Home />} path="/" />
+            <Route element={<AtmoAction />} path="/action" />
           </Routes>
         </main>
       </Router >
@@ -21,3 +22,7 @@ export function App() {
 }
 
 export default App
+
+
+ git config --global user.email "carmel.amarilio@tufin.com"
+  git config --global user.name "Carmel-Amarilio"
