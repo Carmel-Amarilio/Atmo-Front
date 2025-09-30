@@ -1,17 +1,24 @@
+import { useNavigate } from 'react-router-dom';
+
+import { AppHeader } from '../cmps/AppHeader';
+
 import LogoImg from '../assets/img/Logo1.png'
 import icon1Img from '../assets/img/icon1.png'
 import icon2Img from '../assets/img/icon2.png'
 import icon3Img from '../assets/img/icon3.png'
 
 export function AtmoAction() {
+
+    const navigate = useNavigate();
+
+    function goToAConsultation() {
+        navigate('/consultation');
+    }
+
     return (
         <section className='atmo-action flex column align-center '>
-            <article className='main-logo flex column align-center justify-center gap10' >
-                <div className='flex align-center justify-center gap10'>
-                    <img src={LogoImg} alt="" />
-                    <h1>Atmo</h1>
-                </div>
-            </article>
+
+            <AppHeader/>
 
             <section className='option flex align-center justify-center gap10'>
                 <article className='action-card flex column align-center justify-center gap20'>
@@ -24,7 +31,7 @@ export function AtmoAction() {
                     <h2>Log Analysis</h2>
                     <p>Gain insights from cloud logs to monitor and troubleshoot.</p>
                 </article>
-                <article className='action-card flex column align-center justify-center gap20'>
+                <article className='action-card flex column align-center justify-center gap20' onClick={goToAConsultation}>
                     <img src={icon3Img} alt="" />
                     <h2>Cloud Consultation</h2>
                     <p>Ask questions and get advice on your cloud environment.</p>
