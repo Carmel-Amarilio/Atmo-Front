@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 import { AppHeader } from '../cmps/AppHeader';
+import { atmoService } from '../services/Atmo.service';
 
 export function Consultation() {
 
@@ -14,7 +15,16 @@ export function Consultation() {
   function handleSend() {
     if (!input.trim()) return
     setMessages([...messages, { from: 'user', text: input }])
+    sendConsultation()
     setInput('')
+  }
+
+  async function sendConsultation() {
+    try {
+      atmoService.sendConsultation(messages)
+    } catch (error) {
+      console.log('Cannot logout', err)
+    }
   }
 
   return (
